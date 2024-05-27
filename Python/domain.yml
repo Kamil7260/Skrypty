@@ -1,0 +1,53 @@
+version: "3.1"
+intents:
+  - affirm
+  - bot_challenge
+  - deny
+  - give_time
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - restaurant_opening_time
+  - restaurant_listing
+  - book_order
+  - order_placing
+entities:
+  - meal_type
+slots:
+  meal_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: meal_type
+responses:
+  utter_greet:
+    - text: Welcome in our restaurant! How may I help you?
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_ask_for_meal:
+    - text: What would you like to eat?
+  utter_goodbye:
+    - text: Thanks for using our services. See you at a later time!
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_ask_meal_type:
+    - text: So, what is your meal today?
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+actions:
+  - action_show_time
+  - action_order_booked
+  - action_show_opening_time
+  - utter_greet
+  - utter_ask_for_meal
+  - utter_ask_meal_type
+  - action_menu_listing
+  - action_validate_order

@@ -1,0 +1,50 @@
+version: "3.1"
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+  - story: path about time
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: give_time
+      - action: action_show_time
+  - story: placing meal happy
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: restaurant_opening_time
+      - action: action_show_opening_time
+      - intent: book_order
+      - action: action_order_booked
+      - intent: restaurant_listing 
+      - action: action_menu_listing
+      - intent: order_placing
+        entities:
+        - meal_type: pizza
+      - slot_was_set:
+        - meal_type: pizza
+      - action: action_validate_order
+      - intent: goodbye
+      - action: utter_goodbye

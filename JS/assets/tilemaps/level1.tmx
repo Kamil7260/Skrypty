@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="14" height="9" tilewidth="64" tileheight="64" infinite="0" nextlayerid="11" nextobjectid="12">
+ <editorsettings>
+  <export target="../../../../../../../../../Desktop/level1.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="kenney_simple_platformer" tilewidth="64" tileheight="64" tilecount="98" columns="14">
+  <image source="../tilesets/platformPack_tilesheet.png" width="896" height="448"/>
+ </tileset>
+ <layer id="6" name="Platforms" width="14" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,47,47,47,0,0,0,0,0,
+0,0,0,0,0,47,0,0,0,0,0,0,0,0,
+0,0,0,0,47,0,0,0,0,0,0,0,0,1,
+1,0,0,1,1,1,1,1,1,1,1,1,1,4,
+4,0,0,4,4,4,4,4,4,4,4,4,4,4,
+4,0,0,4,4,4,4,4,4,4,4,4,4,4
+</data>
+ </layer>
+ <objectgroup id="9" name="Points">
+  <object id="7" gid="51" x="247.175" y="310.905" width="64" height="64"/>
+  <object id="8" gid="51" x="312.567" y="250.543" width="64" height="64"/>
+  <object id="9" gid="51" x="581.681" y="318.451" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="8" name="WinCircle">
+  <object id="6" gid="38" x="382.989" y="320.966" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="3" name="Spikes">
+  <object id="1" gid="71" x="192" y="384" width="64" height="64"/>
+  <object id="2" gid="71" x="448" y="192" width="64" height="64"/>
+ </objectgroup>
+</map>
